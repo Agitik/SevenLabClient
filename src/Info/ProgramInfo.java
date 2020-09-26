@@ -8,16 +8,17 @@ public class ProgramInfo {
     public static void showMessage(String messageFileName){
         try {
             messageFileName += ".txt";
-            String path = "out\\production\\SevenLabClient\\Messages\\" + messageFileName;
-            File file = new File(path);
-            FileReader fr = new FileReader(file);
-            BufferedReader reader = new BufferedReader(fr);
+            String path = "Messages/" + messageFileName;
+            ClassLoader loader = ProgramInfo.class.getClassLoader();
+            InputStream isstream = loader.getResourceAsStream(path);
+            InputStreamReader inputStreamReader = new InputStreamReader(isstream);
+            BufferedReader reader = new BufferedReader(inputStreamReader);
             String line = reader.readLine();
             while (line != null) {
                 System.out.println(line);
                 line = reader.readLine();
             }
-            fr.close();
+            isstream.close();
             reader.close();
         } catch (IOException e) {
             e.printStackTrace();
