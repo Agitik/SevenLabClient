@@ -18,7 +18,7 @@ public class ClientMain {
     public static User main_user = new User();
 
     //Для дебага
-    public static int port = 9000;
+    public static int port = 7150;
     public static String addr = "localhost";
 
     /**
