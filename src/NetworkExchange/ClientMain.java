@@ -32,7 +32,7 @@ public class ClientMain {
         } catch (NumberFormatException e ){
             System.out.println("Введен некорректный порт!");
         } catch (ArrayIndexOutOfBoundsException e){
-            System.out.println("Параметры не обнаружены, за основу взяты базовые! (localhost, 9000)");
+            System.out.println("Параметры не обнаружены, за основу взяты базовые! (localhost, 7150)");
         }
         Info.ProgramInfo.showMessage("AfterOn");
         boolean isAccountReal = Info.ProgramInfo.isSmthExistWithoutNull();

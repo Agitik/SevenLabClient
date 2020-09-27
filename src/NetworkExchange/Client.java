@@ -48,7 +48,6 @@ public class Client {
             s.close();
         } catch (IOException e) {
 
-            e.printStackTrace(); //дебаг
             System.out.println("Сервер на данном порту не обнаружен!");
             System.out.println("Перезапустите программу с указанием корректных данных.");
             ClientMain.exitCode = true;
